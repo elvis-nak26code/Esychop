@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    min-height: 550px;
+    width: 450px;
+    /* background-color: rgba(0, 195, 255, 0.685); */
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(255, 0, 0, 0.148); */
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+.container form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* background-color: yellow; */
+    width: 95%;
+    margin-top: 15px;
+}
+.container form label{
+    font-size: .8rem;
+}
+.container form div input{
+    width: 90%;
+    background-color: rgb(184, 195, 245);
+    border: none;
+    outline: none;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.nomPrenom div{
+    /* background-color: blue; */
+    margin-top: 0px!important;
+}
+.nomPrenom .NP{
+    /* background-color: green; */
+    flex-direction: row;
+}
+.nomPrenom .NP input{
+    width: 47%;
+}
+
+.container form .accord{
+    /* background-color: red; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.container form .accord label{
+    font-size: .6rem;
+    padding-right: 30px;
+}
+.container form .accord label span{
+    color: rgb(255, 106, 0);
+}
+.container form [type="submit"]{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    font-size: .8rem;
+    background-color:  #1E88E5;
+    color: white;
+    font-weight: 600;
+    transition: .4s;
+}
+.container form [type="submit"]:hover{
+    color: black;
+    background-color: white;
+}
+input::placeholder{
+    font-size: .7rem;
+}
+@media(max-width:450px){
+    .container{
+        width: 95%;
+    }
+}
