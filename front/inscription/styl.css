@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+.container{
+    min-height: 550px;
+    width: 450px;
+    /* background-color: rgba(0, 195, 255, 0.685); */
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(255, 254, 254);
+    position: relative;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(255, 0, 0, 0.148); */
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+.container form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* background-color: yellow; */
+    width: 95%;
+    margin-top: 15px;
+}
+.container form label{
+    font-size: .8rem;
+    font-weight: 500;
+}
+.container form div input{
+    width: 90%;
+    /* background-color: rgb(184, 195, 245); */
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    /* border: none; */
+    outline: none;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+    transition: .3s;
+    background-color: #ffffff37;
+}
+.container form div input::placeholder{
+    color: white;
+}
+.container form div input:focus{
+    transform: scaleY(1.2);
+    border: 1px solid rgb(255, 255, 255);
+}
+.nomPrenom div{
+    /* background-color: blue; */
+    margin-top: 0px!important;
+}
+.nomPrenom .NP{
+    /* background-color: green; */
+    flex-direction: row;
+}
+.nomPrenom .NP input{
+    width: 47%;
+}
+
+.container form .accord{
+    /* background-color: red; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.container form .accord label{
+    font-size: .6rem;
+    padding-right: 30px;
+}
+.container form .accord label span{
+    color: rgb(255, 106, 0);
+}
+.container form [type="submit"]{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    font-size: .8rem;
+    background-color:  #1E88E5;
+    color: white;
+    font-weight: 600;
+    transition: .4s;
+}
+.container form [type="submit"]:hover{
+    background-color: #2e6493;
+}
+input::placeholder{
+    font-size: .7rem;
+}
+.container form [type="checkbox"]{
+    height: 20px;
+    width: 20px;
+}
+
+
+#divbacgroud{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(255, 0, 0, 0.214); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    display: flex;
+    overflow: hidden;
+    backdrop-filter: blur(100px);
+}
+
+#divbacgroud li{
+    background-color: #1E88E5;
+    list-style: none;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    position: relative;
+    z-index: -10;
+    opacity: .7;
+    animation: translate 15s infinite ease-in-out;
+}
+#divbacgroud li:nth-child(1){
+    height: 50px;
+    width: 50px;
+    animation-delay: 1s;
+}
+#divbacgroud li:nth-child(2){
+    height: 70px;
+    width: 70px;
+    top: 100px;
+    left: 10px;
+    animation-delay: 1.4s;
+}
+#divbacgroud li:nth-child(3){
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 60px;
+    animation-delay: .2s;
+}
+#divbacgroud li:nth-child(4){
+    height: 50px;
+    width: 50px;
+    animation-delay: .6s;
+}
+#divbacgroud li:nth-child(5){
+    height: 50px;
+    width: 50px;
+    top: 80%;
+    left: -200px;
+    transform: rotate(70deg);
+    animation-delay: 1.8s;
+}
+
+#blur{
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+@keyframes translate{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(70px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@media(max-width:450px){
+    .container{
+        width: 95%;
+    }
+}

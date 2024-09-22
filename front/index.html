@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
-
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <script src="scrypt.js" defer></script>
     <title>EsyShop</title>
 </head>
 <body>
@@ -35,15 +38,16 @@
     <div class="container">
         <div class="infoAcceuil">
             <div class="containere">
-                <h2>Votre boutique en ligne pour des produits de qualité <br> à des prix compétitifs.</h2>
-                <div class="connection">
-                    <a href="">  <div class="seconnecter">Se connecter</div></a>
-                    <a href="../inscription/inscription.html"><div class="sinscrire">S'inscrir</div></a>
+                <h2 class="observer1">Votre boutique en ligne pour des produits de qualité <br> à des prix compétitifs.</h2>
+                <div class="connection observer1">
+                    <a href="../front/connection/index.html" >  <div class="seconnecter">Se connecter</div></a>
+                    <a href="../front/inscription/inscription.html"><div class="sinscrire">S'inscrir</div></a>
                 </div>
-                <p class="pttexte">votre satisfaction notre prioriter</p>
+                <!-- <p class="pttexte observer1">votre satisfaction notre priorité</p> -->
             </div>
         </div>
-        <div class="recommander">
+        <!-- les produit recommender -->
+        <div class="recommander observer1">
             <h2>Recommander</h2>
             <div class="produits">
                 <div class="item">
@@ -152,35 +156,35 @@
                 </div>
             </div>
         </div>
-        <!-- specialiter  -->
+        <!-- petite presentation de Esychop -->
         <div class="aboute"> 
-            <div class="item"> 
+            <div class="item observer2"> 
                 <div class="icon"><img src="icon/icons8-qualité-48.png" alt=""></div>
                 <h2>Qualité des produits</h2>
                 <p>Chez Esychop, nous nous engageons à offrir des produits de haute qualité, soigneusement sélectionnés et testés pour répondre aux besoins de nos clients. Que ce soit dans la mode, les accessoires ou l'électronique, nous garantissons des articles durables et fiables</p>
             </div>
 
-            <div class="item">
+            <div class="item observer2">
                 <div class="icon"><img src="icon/icons8-livraison-100.png" alt=""></div>
                 <h2>Livraison rapide</h2>
                 <p>Nous savons à quel point il est important de recevoir vos commandes à temps. C'est pourquoi nous proposons une livraison rapide et flexible. Choisissez entre la livraison à domicile ou en point de retrait, selon ce qui vous convient le mieux.</p>
             </div>
 
-            <div class="item">
+            <div class="item observer2">
                 <div class="icon"><img src="icon/icons8-service-client-50 (1).png" alt=""></div>
                 <h2>Service client réactif</h2>
                 <p>Notre service client est disponible 24 heures sur 24, 7 jours sur 7 pour vous assister. Que vous ayez une question sur un produit, un problème avec une commande ou besoin de conseils, notre équipe est là pour vous répondre rapidement et efficacement.</p>
             </div>
 
-            <div class="item">
+            <div class="item observer2">
                 <div class="icon"><img src="icon/icons8-carte-utilisée-48.png" alt=""></div>
                 <h2>Paiements sécurisés</h2>
                 <p>La sécurité de vos transactions est notre priorité. Nous utilisons des systèmes de paiement sécurisés et cryptés pour protéger vos informations personnelles. Vous pouvez acheter en toute confiance avec des méthodes de paiement reconnues et fiables.</p>
             </div>
         </div>
-
+        <!-- formulaire des Avis client -->
         <div class="avis">
-            <div class="form">
+            <div class="form observer1">
                 <h3>Laissez un avis</h3>
                 <form action="">
                     <div class="nom">
@@ -195,9 +199,63 @@
                     <input type="submit" value="envoyer" id="submit">
                 </form>
             </div>
-            <div class="texte">
+            <div class="texte observer1">
 
             </div>
+        </div>
+        <!-- affichage des Avis client -->
+        <h2 id="titreAvis">Retour clients</h2>
+        <div id="affichageAvis" class="observer1">
+                <div class="left"></div>
+                <div class="rigth"></div>
+                <div id="container">
+                    <div class="items">
+                        <h3>nacanabo elvis </h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis abdoul aziz checky amar wintouin</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                    <div class="items">
+                        <h3>nacanabo elvis</h3>
+                        <div class="texte"><p>cest un tre bon site facile dutilusation et tres fluide jai beaucoup adore , on a egalelement une belle experience utilusateur</p></div>
+                    </div>
+                </div>
+        </div>
+        <!-- le footer -->
+        <div id="footer">
+                <div class="container1">
+
+                </div>
         </div>
     </div>
     <!-- menu du bas -->

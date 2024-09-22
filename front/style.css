@@ -1,3 +1,4 @@
+/* general */
 *{
     margin: 0;
     padding: 0;
@@ -7,21 +8,21 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
-body{
-    height: 300vh;
+html {
+    scroll-behavior: smooth;
 }
 .container{
-    /* background-color: rgb(255, 208, 208); */
     min-height: 200vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 60px;
 }
 :root{
     --rapel: #E53935;
     --bleuroyal: #1E88E5;
 }
+
+/* bar de navigation */
 nav{
     height: 50px;
     background-color: rgb(255, 255, 255);
@@ -116,8 +117,8 @@ nav input{
     background: none;
 }
 
+/* le menu du bas */
 #bootommenu{
-    /* background-color: red; */
     height: 50px;
     width: 100%;
     position: fixed;
@@ -146,7 +147,7 @@ nav input{
     opacity: .8;
 }
 
-/* info Acceuil */
+/* info Acceuil , le header*/
 .infoAcceuil{
     height: 400px;
     width: 90%;
@@ -160,11 +161,13 @@ nav input{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.pttexte{
+
+/* .pttexte {
     margin-top: 40px;
     font-size: .7rem;
     font-weight: 600;
-}
+    transition-delay: 1s!important;
+} */
 .infoAcceuil .containere{
     height: 100%;
     min-width: 100%;
@@ -183,6 +186,7 @@ nav input{
     display: flex;
     gap: 10px;
     margin-top: 50px;
+    transition-delay: .3s!important;
 }
 .infoAcceuil .containere .connection .seconnecter{
     font-size: .8rem;
@@ -224,6 +228,18 @@ nav input{
     margin-top: 20px;
     margin-right: 20px;
 }
+
+/* intersection observer1 */
+.observer1{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: .8s!important;
+}
+.visible{
+    transform: translateY(0);
+    transform: scale(1)!important;
+    opacity: 1;
+}
 .infoAcceuil div h1{
     color: var(--bleuroyal);
     font-size: 2rem;
@@ -234,7 +250,6 @@ nav input{
 }
 
 .recommander{
-    /* background-color: rgba(102, 0, 255, 0.604); */
     width: 90%;
     height: 420px;
     margin-top: 30px;
@@ -242,17 +257,14 @@ nav input{
 .recommander .produits{
     width: 100%;
     height: 330px;
-    /* background-color: rgba(0, 0, 255, 0.326); */
     margin-top: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: start;
     align-items: center;
     gap: 30px;
     overflow:scroll ;
-    /* padding: 10px; */
 }
 .recommander .produits::-webkit-scrollbar{
     width: 0;
@@ -270,22 +282,44 @@ nav input{
 .recommander .produits .item{
     height: 300px;
     min-width: 230px;
-    /* background-color: rgba(0, 204, 255, 0.571); */
-    /* border-radius: 5px; */
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.393);
+    overflow: hidden;
 }
+
 .recommander .produits .item .img{
-    background-color: red;
     height: 70%;
     width: 100%;
     background-image: url(images/pair-trainers.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform .5s ease;
+    overflow: hidden;
+}
+
+.recommander .produits .item:hover .img{
+    transform: scale(1.035);
+}
+
+
+/* contenu provisoir a suprimer plus tard */
+.recommander .produits .item:nth-child(1) .img{
+    background-image: url(images/pair-trainers.jpg);
+}
+.recommander .produits .item:nth-child(2) .img{
+    background-image: url(../img-provisoir/24775737.jpg);
+}
+.recommander .produits .item:nth-child(3) .img{
+    background-image: url(../img-provisoir/beautiful-elegance-luxury-fashion-green-handbag.jpg);
+}
+.recommander .produits .item:nth-child(4) .img{
+    background-image: url(../img-provisoir/great-blue-hat.jpg);
+}
+.recommander .produits .item:nth-child(5) .img{
+    background-image: url(../img-provisoir/television-houseplants-room-scene-generative-ai.jpg);
 }
 .recommander .produits .item .detail{
-    /* background-color: yellow; */
     height: 30%;
     width: 100%;
     display: flex;
@@ -300,6 +334,9 @@ nav input{
 .recommander .produits .item .detail .prix{
     font-size: .8rem;
     font-weight: 800;
+}
+.recommander .produits .item .detail .prix span{
+    color: rgb(255, 136, 0);
 }
 .recommander .produits .item .detail .panier{
     background-color: var(--bleuroyal);
@@ -320,10 +357,10 @@ nav input{
     color: black;
     border: .5px solid rgba(0, 0, 0, 0.453);
 }
+/* section de la petite presentation  */
 .aboute{
     min-height: 530px;
     width: 92%;
-    /* background-color: rgba(30, 255, 0, 0.618); */
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -331,7 +368,6 @@ nav input{
     gap: 20px;
     flex-wrap: wrap;
     padding: 15px;
-    /* border: 1px solid rgba(0, 0, 0, 0.356); */
     background-color: rgb(233, 233, 233);
     border-radius: 5px;
 }
@@ -354,7 +390,6 @@ nav input{
 .aboute .item:hover{
     background-color:var(--bleuroyal);
     color: rgb(255, 255, 255);
-    /* border: 1px solid rgb(74, 146, 255); */
 }
 .aboute .item:hover .icon{
     background-color: rgb(255, 255, 255);
@@ -370,7 +405,6 @@ nav input{
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    /* background-color: black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,8 +412,13 @@ nav input{
 .aboute div .icon img{
     width: 80px;
 }
+/* intersection observer */
+.observer2{
+    transform: scale(.4);
+}
+
+/* section des Avis utilisateur */
 .avis{
-    /* background-color: blue; */
     width: 90%;
     min-height: 500px;
     margin-top: 20px;
@@ -387,7 +426,6 @@ nav input{
     grid-template-columns: repeat(2,1fr);
 }
 .avis .form{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,7 +434,6 @@ nav input{
 }
 
 .avis .texte{
-    /* border: 1px solid rgb(0, 60, 255); */
     background-image: url(images/6600687.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -404,7 +441,6 @@ nav input{
 }
 
 .avis form{
-    /* background-color: aquamarine; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -454,6 +490,95 @@ nav input{
     background:none;
     border: 1px solid black;
 }
+
+/* affichage des Avis client */
+#titreAvis{
+    margin-top: 40px;
+    text-decoration: underline;
+}
+#affichageAvis{
+    height: 300px;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#affichageAvis .left{
+    height: 100%;
+    width: 25%;
+    background-color: green;
+    background: linear-gradient(to right, white, transparent);
+    position: absolute;
+    top: 0;
+    left:-1px;
+}
+#affichageAvis .rigth{
+    height: 100%;
+    width: 25%;
+    background-color: rgb(0, 21, 128);
+    background: linear-gradient(to left, white, transparent);
+    position: absolute;
+    right: -1px;
+    top: 0;
+}
+
+#affichageAvis #container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-y: scroll;
+}
+#affichageAvis #container::-webkit-scrollbar{
+    display: none;
+}
+#affichageAvis #container .items{
+    height: 90%;
+    min-width: 220px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid  rgb(255, 217, 0);
+    border-radius: 5px;
+    transition: .5s;
+}
+#affichageAvis #container .items:hover{
+    background-color:  rgba(255, 217, 0, 0.149);
+}
+#affichageAvis #container .items h3{
+    height: 20%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+#affichageAvis #container .items .texte{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#affichageAvis #container .items .texte p{
+    font-size: .8rem;
+}
+
+/* the footer */
+#footer{
+    min-height: 400px;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 100;
+}
+#footer .container1{
+    height: 300px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+/* responsive */
 @media(max-width:1200px){
     nav ul{
         display: none;
@@ -473,13 +598,12 @@ nav input{
     nav #logo{
         font-size: 1.3rem;
     }
-    /* nav .connection .seconnecter,nav .connection .sinscrire{
-        display: none;
-    } */
+    .container{
+        padding-bottom: 60px;
+    }
     #bootommenu{
         display: flex;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.258);
-        /* gap: 2px; */
     }
     .infoAcceuil{
         height: 300px;
@@ -522,5 +646,19 @@ nav input{
     .pttexte{
         margin-top: 30px;
         font-size: .5rem;
+    }
+    /* affichage des Avis client */
+    #affichageAvis .left{
+        width: 15%;
+    }
+    #affichageAvis .rigth{
+        width: 15%;
+    }
+    #affichageAvis #container .items{
+        min-width: 170px;
+    }
+    #affichageAvis #container{
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
