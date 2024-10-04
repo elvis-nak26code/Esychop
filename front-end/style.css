@@ -8,6 +8,7 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -35,6 +36,7 @@ nav{
     position: sticky;
     top: 0;
     z-index: 100;
+    /* overflow: hidden; */
 }
 nav ul{
     display: flex;
@@ -75,7 +77,7 @@ nav #logo{
     font-style: normal;
 }
 nav .user{
-    background-color: rgba(30, 0, 255, 0.358);
+    background-color: rgb(7, 0, 64);
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -85,9 +87,72 @@ nav .user{
     font-size: 1.5rem;
     font-weight: 800;
     animation: rotate 10s infinite;
+    cursor: pointer;
+    color: white;
 }
 @keyframes rotate{
     0%{transform: rotate(360deg);}
+}
+/* userinfo */
+#userinfo{
+    min-height: 300px;
+    width: 300px;
+    border: 1px solid rgb(250, 250, 250);
+    background-color: #020032;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: .9rem;
+    color: white;
+    transform: translateY(-150%);
+    transition: .4s;
+    z-index: -2;
+}
+.menutoggle{
+    transform: translate(0)!important;
+}
+#userinfo #salutation{
+    font-weight: 800;
+}
+#userinfo .info{
+    /* background-color: red; */
+    min-height: 200px;
+    border-top: 1px solid rgba(255, 255, 255, 0.215);
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.215);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 10px;
+}
+#userinfo .info p{
+    font-weight: 600;
+}
+#userinfo .info p span{
+    opacity: .6;
+    word-wrap: break-word;
+}
+#userinfo a{
+    font-weight: 800;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    padding-left: 10px;
+    transition: .4s;
+    color: white;
+}
+#userinfo a:hover{
+    background-color: rgb(227, 227, 227);
+    color: black;
 }
 nav .recherche{
     background-color: rgb(255, 255, 255);
@@ -150,7 +215,7 @@ nav input{
 /* info Acceuil , le header*/
 .infoAcceuil{
     height: 400px;
-    width: 90%;
+    width: 95%;
     background-color: blue;
     border-radius: 10px;
     margin-top: 20px;
@@ -250,14 +315,14 @@ nav input{
 }
 
 .recommander{
-    width: 90%;
-    height: 420px;
-    margin-top: 30px;
+    width: 95%;
+    height: 360px;
+    margin-top: 20px;
 }
 .recommander .produits{
     width: 100%;
-    height: 330px;
-    margin-top: 30px;
+    height: 270px;
+    margin-top:6px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -280,8 +345,8 @@ nav input{
 
 
 .recommander .produits .item{
-    height: 300px;
-    min-width: 230px;
+    height: 230px;
+    min-width: 180px;
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.393);
     overflow: hidden;
@@ -357,6 +422,59 @@ nav input{
     color: black;
     border: .5px solid rgba(0, 0, 0, 0.453);
 }
+/* categorie des produit */
+#categorie-dispo{
+    height: 200px;
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#categorie-dispo h2{
+    height: 20%;
+}
+#categorie-dispo .contenu{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-y: scroll;
+}
+#categorie-dispo .contenu::-webkit-scrollbar{
+    display: none;
+}
+#categorie-dispo .contenu .item{
+    height: 90%;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 1s;
+}
+#categorie-dispo .contenu .item:hover{
+    background-color: rgba(0, 0, 0, 0.101);
+    border-radius: 20px;
+    transition: .3s;
+}
+#categorie-dispo .contenu .item .img{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50%;
+    background-image: url(images/pngtree-digital-retailing-illustration-laptop-keyboard-with-shopping-basket-and-e-commerce-image_3903657.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#categorie-dispo .contenu .item h2{
+    font-size: .8rem;
+}
+/* presentation de produit */
+#presentation-produit{
+    background-color: red;
+    min-height: 500px;
+    width: 95%;
+}
 /* section de la petite presentation  */
 .aboute{
     min-height: 530px;
@@ -376,8 +494,8 @@ nav input{
     backdrop-filter: blur(10px);
     color: rgb(0, 0, 0);
     min-height: 350px;
-    min-width: 280px;
-    max-width: 280px;
+    min-width: 260px;
+    max-width: 260px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -419,7 +537,7 @@ nav input{
 
 /* section des Avis utilisateur */
 .avis{
-    width: 90%;
+    width: 95%;
     min-height: 500px;
     margin-top: 20px;
     display: grid;
@@ -498,7 +616,7 @@ nav input{
 }
 #affichageAvis{
     height: 300px;
-    width: 60%;
+    width: 65%;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -571,6 +689,7 @@ nav input{
     box-sizing: border-box;
     padding: 10px;
     z-index: 100;
+    display: none;
 }
 #footer .container1{
     height: 300px;
@@ -612,11 +731,6 @@ nav input{
     .infoAcceuil div{
         font-size: 1.2rem;
     }
-}
-@media(max-width:700px){
-    .infoAcceuil div h2{
-        font-size: 1rem;
-    } 
 }
 @media(max-width:900px){
     .avis{
@@ -661,4 +775,97 @@ nav input{
         padding-left: 30px;
         padding-right: 30px;
     }
+    .aboute{
+    width: 93%;
 }
+.aboute .item{
+    min-height: 300px!important;
+    min-width: 100px!important;
+}
+.aboute .item p{
+    font-size: .7rem!important;
+}
+.titles{
+    font-size: 1.4rem!important;
+}
+.infoAcceuil div h2{
+    margin-top: 50px;
+    margin-right: 50px;
+    font-size: 1.8rem;
+}
+}
+
+@media(max-width:700px){
+    .infoAcceuil div h2{
+        font-size: 1rem;
+        margin: 0;
+    } 
+    .infoAcceuil {
+        height: 200px!important;
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    } 
+
+.recommander{
+    height: 240px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.recommander .produits{
+    width: 100%;
+    height: 190px;
+    margin-top: 0;
+    gap: 10px;
+}
+.recommander .produits .item{
+    height: 150px;
+    min-width: 120px;
+}
+.recommander .produits .item p{
+    font-size: .55rem!important;
+    font-weight: 0;
+}
+.recommander .produits .item .panier{
+    height: 20px!important;
+    font-size: .6rem!important;
+}
+.titles{
+    font-size: 1rem!important;
+    margin: 0;
+}
+
+.aboute{
+    min-height: 530px;
+    width: 92%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.aboute .item h2{
+    font-size: .8rem;
+}
+.aboute .item p{
+    font-size: .55rem!important;
+}
+.aboute .item{
+    min-height: 90px!important;
+}
+
+#categorie-dispo{
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+#categorie-dispo .contenu .item{
+    min-width: 110px;
+    min-width: 80px;
+}
+#categorie-dispo .contenu .item .img{
+    height: 70px;
+    width: 70px;
+}
+#categorie-dispo .contenu .item h2{
+    font-size: .7rem;
+}
+    
+    }
