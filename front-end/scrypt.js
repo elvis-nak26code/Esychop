@@ -17,12 +17,15 @@ const observer = new IntersectionObserver(callback, options)
 
 let element_observer= document.querySelectorAll(".observer1")
 let element_observer2= document.querySelectorAll(".observer2")
+let element_observer3= document.querySelectorAll(".observer3")
 for(let i=0; i<element_observer.length;i++){
     observer.observe(element_observer[i])
 }
-
 for(let i=0; i<element_observer2.length;i++){
     observer.observe(element_observer2[i])
+}
+for(let i=0; i<element_observer3.length;i++){
+    observer.observe(element_observer3[i])
 }
 
 // apparution du profile au click

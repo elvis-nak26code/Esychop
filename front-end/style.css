@@ -97,8 +97,8 @@ nav .user{
 #userinfo{
     min-height: 300px;
     width: 300px;
-    border: 1px solid rgb(250, 250, 250);
-    background-color: #020032;
+    border: 1px solid rgb(146, 146, 146);
+    background-color: #ffffff;
     position: absolute;
     top: 50px;
     right: 0;
@@ -107,10 +107,11 @@ nav .user{
     justify-content: space-between;
     padding: 15px;
     font-size: .9rem;
-    color: white;
+    color: rgb(0, 0, 0);
     transform: translateY(-150%);
     transition: .4s;
     z-index: -2;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.282);
 }
 .menutoggle{
     transform: translate(0)!important;
@@ -121,8 +122,8 @@ nav .user{
 #userinfo .info{
     /* background-color: red; */
     min-height: 200px;
-    border-top: 1px solid rgba(255, 255, 255, 0.215);
-    border-bottom: 1px solid  rgba(255, 255, 255, 0.215);
+    border-top: 1px solid rgba(0, 0, 0, 0.215);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.215);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -148,7 +149,7 @@ nav .user{
     border-radius: 15px;
     padding-left: 10px;
     transition: .4s;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 #userinfo a:hover{
     background-color: rgb(227, 227, 227);
@@ -290,8 +291,13 @@ nav input{
     cursor: pointer;
 }
 .infoAcceuil div h2{
+    font-weight: 800;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
     margin-top: 20px;
     margin-right: 20px;
+    font-size: 2rem;
 }
 
 /* intersection observer1 */
@@ -303,7 +309,7 @@ nav input{
 .visible{
     transform: translateY(0);
     transform: scale(1)!important;
-    opacity: 1;
+    opacity: 1!important;
 }
 .infoAcceuil div h1{
     color: var(--bleuroyal);
@@ -471,10 +477,124 @@ nav input{
 }
 /* presentation de produit */
 #presentation-produit{
-    background-color: red;
     min-height: 500px;
     width: 95%;
+    padding-bottom: 10px;
 }
+#presentation-produit h2{
+    height: 30px;
+    margin-bottom: 10px;
+}
+#presentation-produit .produit-container{
+    min-height: 460px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#presentation-produit .produit-container .produit{
+    min-height: 300px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.033);
+    transition: .2s;
+    cursor: pointer;
+}
+#presentation-produit .produit-container .produit:hover{
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.103);
+    transform: scale(1.01)!important;
+}
+
+/* intersection observer */
+.observer3{
+    opacity: 0;
+    transition: 1s;
+}
+#presentation-produit .produit-container .produit .img{
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img-provisoir/television-houseplants-room-scene-generative-ai.jpg);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#presentation-produit .produit-container .produit .description{
+    height: 70px;
+    width: 100%;
+    /* background-color: red; */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: calc(1.5em * 3);
+}
+#presentation-produit .produit-container .produit .description p{
+    font-size: .9rem;
+    text-align: start;
+}
+#presentation-produit .produit-container .produit .prix{
+    width: 100%;
+    min-height: 30px;
+    font-weight: 800;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    color: rgb(255, 136, 0);
+}
+#presentation-produit .produit-container .produit .panier{
+    width: 100%;
+    min-height: 10%;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#presentation-produit .produit-container .produit .panier .btn{
+    height: 30px;
+    background-color: rgb(205, 205, 255);
+    width: 30px;
+    border-radius: 6px;
+    background-image: url(icon/icons8-ajouter-au-panier-100.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+#presentation-produit .produit-container .produit .panier .btn:active{
+    transform: scale(1.2)!important;
+    background-color: rgb(55, 255, 0);
+}
+#presentation-produit .produit-container .produit .panier .btn:hover{
+    transform: rotate(-30deg);
+}
+
+#presentation-produit .produit-container .produit .panier .lik{
+    height: 30px;
+    /* background-color: rgb(205, 205, 255); */
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 800;
+}
+#presentation-produit .produit-container .produit .panier .lik img:active{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
 /* section de la petite presentation  */
 .aboute{
     min-height: 530px;
@@ -532,7 +652,8 @@ nav input{
 }
 /* intersection observer */
 .observer2{
-    transform: scale(.4);
+    transform: scale(.8);
+    opacity: 0;
 }
 
 /* section des Avis utilisateur */
@@ -841,6 +962,9 @@ nav input{
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
+.aboute .item .icon{
+    transform: scale(.6);
+}
 .aboute .item h2{
     font-size: .8rem;
 }
@@ -867,5 +991,62 @@ nav input{
 #categorie-dispo .contenu .item h2{
     font-size: .7rem;
 }
-    
+
+
+#affichageAvis{
+    height: 250px;
+}
+#affichageAvis .left{
+    width: 20%;
+}
+#affichageAvis .rigth{
+    width: 20%;
+}
+
+#affichageAvis #container .items{
+    min-width: 180px;
+}
+#affichageAvis #container .items p{
+    font-size: .7rem!important;
+}
+#affichageAvis #container .items h3{
+    font-size: .9rem!important;
+}
+
+
+#presentation-produit .produit-container .produit .img{
+    height: 200px;
+}
+#presentation-produit .produit-container .produit .description{
+    line-height: 1.6;
+    max-height: calc(2em * 3);
+}
+#presentation-produit .produit-container .produit .description p{
+    font-size: .7rem;
+    text-align: start;
+}
+#presentation-produit .produit-container .produit .prix{
+    font-size: .9rem;
+}
+
+    }
+
+    /* petit telephone */
+    @media(max-width:550px){
+        #presentation-produit .produit-container{
+            min-height: 460px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            column-gap: 5px;
+            row-gap: 0;
+        }
+        #presentation-produit .produit-container .produit{
+            height: 250px;
+            width: auto;
+        }
+        #presentation-produit .produit-container .decalage{
+            margin-top: 30px;
+        }
     }

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="produit-stile.css">
+    <script src="../scrypt.js" defer></script>
+
+    <!-- font -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Permanent+Marker&family=Protest+Strike&display=swap" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+
+    <!-- integration de swiper par CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- slider style -->
+    <style>
+        .swiper {
+            height: 300px!important;
+            width: 95%;
+        }
+        .slider-container{
+            border-radius: 10px;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background-color: rgb(0, 255, 64);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-position: center;
+            background-size: cover;
+            background-image: url(../images/black-friday-sales-sign-neon-light.jpg);
+        }
+        </style>
+</head>
+<body>
+    <!-- navigation -->
+    <nav>
+        <p id="logo">EsyShop</p>
+        <ul>
+            <li><a href="/front-end/index.html">Home</a></li>
+            <li><a href="">Produit</a></li>
+            <li id="panier"><a href="">Panier</a><div id="notification">1</div></li>
+            <li><a href="">Suportclient</a></li>
+            <li><a href="">Legal</a></li>
+        </ul>
+        <div class="recherche">
+            <input type="text" name="" id="" placeholder="recherche">
+            <div class="btn"><img src="../icon/icons8-loupe-50.png" alt=""></div>
+        </div>
+        
+        <div class="user" id="userN">N</div>
+        <div id="userinfo">
+                <p id="salutation">Salut, <span id="slttn">ELVIS</span></p>
+                <div class="info">
+                    <p>Email: <span id="emailUtilusateur">eeeeeee@gmai.com</span></p>
+                    <p>Nom: <span id="nomlUtilusateur">Nacanabo</span></p>
+                    <p>Prenom: <span id="prenomutilusateur">Elvis</span></p>
+                    <p>Tel: <span id="tellUtilusateur">64593395</span></p>
+                    <a href="">Modifier</a>
+                </div>
+                <a href="">Se déconnecter</a>
+        </div>
+    </nav>
+
+    <!-- le contenaire principale -->
+    <div id="contenairprincipale">
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper slider-container">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- slide1 -->
+                <div class="swiper-slide" style="background-image: url(../images/imageproduit1.jpg);"> <div class="front">
+                    <div class="rigth">
+                        <p>Profitez d'un paiement sécurisé à chaque transaction</p>
+                        <p>os informations sont protégées pour un shopping en toute tranquillité.</p>
+                        <p>Achetez en toute confiance, votre sécurité est notre priorité."</p>
+                        <div id="savoir-plus">en savoir plus</div>
+                    </div>
+                </div> </div>
+                <!-- slide2 -->
+                <div class="swiper-slide" style="background-image: url(../images/image-pour-item2.jpg);"><div class="front">
+                    <div class="left">
+                        <h4> Découvrez une large gamme de produits pour toute la famille. </h4>
+                        <p>Que ce soit des vêtements,<br> des accessoires ou des articles du quotidien, <br> tout est là pour simplifier votre shopping.</p>
+                    </div>
+                    <div class="rigth">
+                        <div class="container">
+                            <div style="background-image: url(../images/15pro.jpg);"></div>
+                            <div style="background-image: url(../images/carton.jpg);"></div>
+                            <div style="background-image: url(../images/pull.jpg);"></div>
+                            <div style="background-image: url(../images/Mac.jpg);"></div>
+                        </div>
+                        <p>Esychop.com</p>
+                    </div>
+                </div></div>
+                <!-- slide3 -->
+                <div class="swiper-slide" style="background-image: url(../images/slideproduit3.jpg);">
+                    <div class="front">
+                            <div class="left">
+                                <div class="container">
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="rigth">
+                                <p>
+                                    "Découvrez notre sélection d'accessoires high-tech , <br> pour une expérience connectée à la pointe de la technologie."
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- petit titre d'intro -->
+        <div id="titrecontainer">
+            <h2><img src="../icon/icons8-rose-emoji-48.png" alt="">Économisez facilement avec Esychop ! <img src="../icon/icons8-rose-emoji-48.png" alt=""></h2>
+            <p>Explore tes centres d'intérêt</p>
+        </div>
+        <div id="produit-container">
+            <div class="categories">
+                <div class="items">chaussur</div>
+                <div class="items">maquillages</div>
+                <div class="items">pagne</div>
+                <div class="items">t-shirt</div>
+                <div class="items">tele[phone</div>
+                <div class="items">nimporte quoi</div>
+                <div class="items">habit pour tout petit</div>
+                <!-- <div class="items">jjejjhehjjhejhehjejhejhjhejhehjdkjkdl</div> -->
+                <div class="items"></div>
+                <div class="items"></div>
+                <div class="items"></div>
+                <div class="items"></div>
+                <div class="items"></div>
+                <div class="items"></div>
+                <div class="items"></div>
+            </div>
+
+            <!-- disposition des produits -->
+        <div id="presentation-produit">
+            <div class="produit-container">
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="../icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- voir plus -->
+
+    <div id="voir-plus"> voir plus</div>
+
+
+    </div>
+
+    <!-- menu du bas -->
+    <div id="bootommenu">
+        <div><img src="../icon/icons8-accueil-50.png" alt="">Home</div>
+        <div><img src="../icon/icons8-produit-50.png" alt="">Produit</div>
+        <div><img src="../icon/icons8-panier-50.png" alt="">Panier</div>
+        <div><img src="../icon/icons8-service-client-50.png" alt="">Suportclient</div>
+        <div><img src="../icon/icons8-loi-50.png" alt="">legal</div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: 'fade',
+        autoplay: {
+            delay: 3000, // Durée de l'autoplay en millisecondes (ici 3 secondes)
+            disableOnInteraction: false, // L'autoplay continue même après une interaction
+            },
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+            clickable: true,
+            },
+    });
+    </script>
+</body>
+</html>
