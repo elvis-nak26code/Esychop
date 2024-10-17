@@ -1,0 +1,31 @@
+/* menue */
+#menu{
+    background-color: blue;
+    height: 50px;
+    width: 100%;
+    display: none;
+}
+/* contenu principal */
+#container--principal{
+    background-color: rgb(255, 0, 0);
+    min-height: 200vh;
+    padding-bottom: 10px;
+    width: 100%;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    position: relative;
+}
+#container--principal .left{
+    background-color: yellow;
+}
+#container--principal .left h3{
+    text-align: center;
+}
+
+#container--principal .rigth{
+    background-color: rgb(0, 251, 255);
+    height: 700px;
+    position: sticky;
+    top: 0;
+}

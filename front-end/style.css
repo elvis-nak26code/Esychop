@@ -111,7 +111,7 @@ nav .user{
     transform: translateY(-150%);
     transition: .4s;
     z-index: -2;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.282);
+    /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.282); */
 }
 .menutoggle{
     transform: translate(0)!important;
@@ -222,8 +222,8 @@ nav input{
     margin-top: 20px;
     display: flex;
     overflow: hidden;
-    background-image: url(images/online-shop-dark-blue-with-shopping-element-3d-illustration_925613-52404.jpg);
-    background-position: center;
+    background-image: url(images/OUT.png);
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -468,7 +468,7 @@ nav input{
     width: 100px;
     background-color: black;
     border-radius: 50%;
-    background-image: url(images/pngtree-digital-retailing-illustration-laptop-keyboard-with-shopping-basket-and-e-commerce-image_3903657.jpg);
+    background-image: url(images/sony-playstation-5-ps5-edition-standard-removebg-preview.png);
     background-size: cover;
     background-position: center;
 }
@@ -523,7 +523,7 @@ nav input{
     width: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url(../img-provisoir/television-houseplants-room-scene-generative-ai.jpg);
+    background-image: url(../front-end/images/pull.jpg);
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -597,20 +597,22 @@ nav input{
 
 /* section de la petite presentation  */
 .aboute{
-    min-height: 530px;
+    min-height: 450px;
     width: 92%;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap;
     padding: 15px;
-    background-color: rgb(233, 233, 233);
-    border-radius: 5px;
+    /* background-color: rgb(233, 233, 233); */
+    /* border-radius: 5px; */
+    border-top:5px solid rgba(0, 0, 0, 0.086) ;
+    border-bottom:5px solid rgba(0, 0, 0, 0.09) ;
 }
 .aboute .item{
-    background-color: rgba(255, 255, 255, 0.59);
+    /* background-color: rgba(255, 81, 0, 0.551); */
     backdrop-filter: blur(10px);
     color: rgb(0, 0, 0);
     min-height: 350px;
@@ -624,6 +626,7 @@ nav input{
     border-radius: 10px;
     transition: .5s;
     box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.223);
 }
 .aboute .item:hover{
     background-color:var(--bleuroyal);
