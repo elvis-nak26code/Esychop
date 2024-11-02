@@ -13,14 +13,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
     <!-- integration swiper par CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="produit1-scrypt.js" defer></script>
+    <style>
+            .swiper {
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0);
+                padding: 5px;
+                box-sizing: border-box;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.114)!important;
+            }
+        
+            .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        
+            .mySwiper2 {
+                height: 80%;
+            }
+        
+            .mySwiper {
+                height: 18%;
+                margin-top: 7px;
+            }
+            .mySwiper .swiper-slide{
+                width: 20%!important;
+            }
+        
+            .mySwiper .swiper-slide {
+                width: 25%;
+                opacity: 0.4;
+            }
+        
+            .mySwiper .swiper-slide-thumb-active {
+                opacity: 1;
+            }
+        </style>
 </head>
 <body>
+    <div id="container-ajouter-commentaire">
+        <div class="formulair">
+            <textarea name="" id="" placeholder="saisisez votre message"></textarea>
+            <button>envoyer</button>
+            <div class="btn-close" id="btn-close"><img src="../icon/icons8-effacer-64.png" alt=""></div>
+        </div>
+    </div>
     <!-- navigation -->
     <nav>
         <p id="logo">EsyShop</p>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Produit</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/front-end/produit/produit.html">Produit</a></li>
             <li id="panier"><a href="">Panier</a><div id="notification">1</div></li>
             <li><a href="">Suportclient</a></li>
             <li><a href="">Legal</a></li>
@@ -50,9 +97,377 @@
     <!-- contenu -->
     <div id="container--principal">
         <div class="left">
-            <h3>NOM DU PRODUIT</h3>
+
+           <div class="container">
+            <div id="visuel-produit">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../images/OUT.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/casqueaudio.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/pull.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/OUT.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/casqueaudio.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/pull.jpg" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../images/OUT.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/casqueaudio.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/pull.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/OUT.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/casqueaudio.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/pull.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rigth"></div>
+
+        <div id="espace-pour-info-produit-telephone"></div>
+            <!-- commentaire des clients -->
+            <div id="commentaire-client">
+                <h2>Commentaires des clients</h2>
+
+                <div class="item" id="nombre-lik">
+                    <div class="lik">
+                        200 <img src="../icon/icons8-amour-encerclé-48.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="nom-date">
+                        <div class="user">N</div>  <p>Nacanabo elvis <span>21sept 2024</span></p>
+                    </div>
+                    <div class="type">
+                        <p>Type: iphone 6s couleur rouge face id of</p>
+                    </div>
+                    <div class="commentaire">
+                        <p>"Je suis vraiment ravi de mon expérience sur ce site ! Les produits sont de très bonne qualité, exactement comme décrits, et la livraison a été plus rapide que prévu. Le service client est très réactif et professionnel. J'ai eu une question sur ma commande et ils ont pris le temps de tout m'expliquer. Je recommande vivement ce site à tous ceux qui recherchent des produits fiables et un excellent service. Merci beaucoup !"</p>
+                    </div>
+                    <div class="jaime">128 <div class="img"></div></div>
+                </div>
+                <div class="item">
+                    <div class="nom-date">
+                        <div class="user">N</div>  <p>Nacanabo elvis <span>21sept 2024</span></p>
+                    </div>
+                    <div class="type">
+                        <p>Type: iphone 6s couleur rouge face id of</p>
+                    </div>
+                    <div class="commentaire">
+                        <p>"Je suis vraiment ravi de mon expérience sur ce site ! Les produits sont de très bonne qualité, exactement comme  tous ceux qui recherchent des produits fiables et un excellent service. Merci beaucoup !"</p>
+                    </div>
+                    <div class="jaime">128 <div class="img"></div></div>
+                </div>
+                <div class="item">
+                    <div class="nom-date">
+                        <div class="user">N</div>  <p>Nacanabo elvis <span>21sept 2024</span></p>
+                    </div>
+                    <div class="type">
+                        <p>Type: iphone 6s couleur rouge face id of</p>
+                    </div>
+                    <div class="commentaire">
+                        <p>"Je sus rapide que prévu. Le service client est très réactif et professionnel. J'ai eu une question sur ma commande et ils ont pris le temps de tout m'expliquer. Je recommande vivement ce site à tous ceux qui recherchent des produits fiables et un excellent service. Merci beaucoup !"</p>
+                    </div>
+                    <div class="jaime">128 <div class="img"></div></div>
+                </div>
+                <div class="item">
+                    <div class="nom-date">
+                        <div class="user">N</div>  <p>Nacanabo elvis <span>21sept 2024</span></p>
+                    </div>
+                    <div class="type">
+                        <p>Type: iphone 6s couleur rouge face id of</p>
+                    </div>
+                    <div class="commentaire">
+                        <p>"Je suis vraimn excellent service. Merci beaucoup !"</p>
+                    </div>
+                    <div class="jaime">128 <div class="img"></div></div>
+                </div>
+                <div class="item">
+                    <div class="nom-date">
+                        <div class="user">N</div>  <p>Nacanabo elvis <span>21sept 2024</span></p>
+                    </div>
+                    <div class="type">
+                        <p>Type: iphone 6s couleur rouge face id of</p>
+                    </div>
+                    <div class="commentaire">
+                        <p>"Je suis vraiment ravi de mi recherchent des produits fiables et un excellent service. Merci beaucoup !"</p>
+                    </div>
+                    <div class="jaime">128 <div class="img"></div></div>
+                </div>
+            </div>
+            <!-- btn ajouter commentaire -->
+            <div id="ajouter-commentaire">Ajouter un commentaire +</div>
+        </div>
+        <div class="rigth" id="container-rigth">
+            <div class="description"> <p>Le casque audio JBL noir allie performance sonore exceptionnelle et design élégant. Conçu pour offrir une expérience immersive, il est doté de basses puissantes et d'une clarté audio supérieure, signée JBL. </p> </div>
+            <div class="couleur-disponible">
+                <h4>couleur Disponible</h4>
+                <div class="couleur">
+                    <div class="item" style="background-color: red;"></div>
+                    <div class="item" style="background-color: yellow;"></div>
+                    <div class="item" style="background-color: black;"></div>
+                    <div class="item" style="background-color: aqua;"></div>
+                </div>
+            </div>
+            <!-- quantite -->
+            <div class="quantite"><h4>Quqntite(s)</h4> <div class="input-Q">
+                        <div class="item">-</div>
+                        <div class="item">3</div>
+                        <div class="item">+</div>
+            </div> </div>
+            <!-- prix -->
+            <div id="prix">prix: <span>1500f</span></div>
+            <!-- panier -->
+            <div id="panier-2">
+                <div class="btn">AJOUTER AU PANIER</div>
+                <div class="lik"></div>
+            </div>
+            <!-- politique -->
+            <div id="politique">
+                <div class="item">
+                    <div class="imgtitre">
+                        <img src="../icon/icons8-livraison-50.png" alt="">
+                        <div class="titre"><h4>Livraison rapide</h4></div>
+                    </div>
+                    <div class="detail"><p>Expédition Standard Livraison : 8-10 jours ouvrés</p></div>
+                </div>
+                <div class="item">
+                    <div class="imgtitre">
+                        <img src="../icon/icons8-politique-de-confidentialité-48.png" alt="">
+                        <div class="titre"><h4>politique de retour</h4></div>
+                    </div>
+                    <div class="detail"><p>Les articles ne peuvent être retournés ou échangés</p></div>
+                </div>
+                <div class="item">
+                    <div class="imgtitre">
+                        <img src="../icon/icons8-bouclier-de-sécurité-vert-50.png" alt="">
+                        <div class="titre"><h4>Sécurité des achats</h4></div>
+                    </div>
+                    <div class="detail"><p class="p-complex"><span><img src="../icon/icons8-approved-24.png" alt=""> Paiements Sécurisés</span><span><img src="../icon/icons8-approved-24.png" alt="">Logistique Sécurisée</span><span><img src="../icon/icons8-approved-24.png" alt="">Service Clientèle</span><span><img src="../icon/icons8-approved-24.png" alt="">Protection vie privée</span></p></div>
+                </div>
+                <div class="item">
+                    <div class="imgtitre">
+                        <img src="../icon/icons8-boutique-en-ligne-sac-à-provisions-50.png" alt="">
+                        <div class="titre">Vendu par Esychop</div>
+                    </div>
+                    <div class="detail"><p>Pour signaler ce vendeur et/ou ce produit</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- presentaation de produit similaire -->
+    <div id="produit-similaire">
+        <div id="presentation-produit">
+            <h2 class="titles" style="text-align: center;">Produit similaire</h2>
+            <div class="produit-container">
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+                <div class="produit observer3 decalage">
+                    <div class="img"></div>
+                    <div class="description"><p>une television smarte pour , pour une experiance visuel incomparable sjygshdfjsguidhfshuidfhuishf sygshfuhgshdgiyf</p></div>
+                    <div class="prix">$1800</div>
+                    <div class="panier"> <div class="lik">28 liks <img src="icon/icons8-coeurs-24.png" alt=""></div> <div class="btn"></div></div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- menu du bas -->
     <div id="bootommenu">
@@ -62,5 +477,27 @@
         <div><img src="../icon/icons8-service-client-50.png" alt="">Suportclient</div>
         <div><img src="../icon/icons8-loi-50.png" alt="">legal</div>
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
+</script>
 </body>
 </html>

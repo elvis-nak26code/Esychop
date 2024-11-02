@@ -1,0 +1,22 @@
+/* style general */
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+#container-principal{
+    min-height: 800px;
+    width: 100%;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#container-principal .left{
+    background-color: blue;
+}
+#container-principal .rigth{
+    background-color: rgb(30, 255, 0);
+}

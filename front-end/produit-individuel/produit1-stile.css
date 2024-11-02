@@ -5,27 +5,591 @@
     width: 100%;
     display: none;
 }
-/* contenu principal */
-#container--principal{
-    background-color: rgb(255, 0, 0);
-    min-height: 200vh;
-    padding-bottom: 10px;
-    width: 100%;
-    padding-top: 10px;
-    display: grid;
-    grid-template-columns: 2fr 1.2fr;
+body{
+    background-color: rgba(243, 243, 243, 0.404);
     position: relative;
 }
-#container--principal .left{
-    background-color: yellow;
+/* contenu principal */
+#container--principal{
+    min-height: 200vh;
+    padding-bottom: 15px;
+    width: 100%;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    /* overflow: hidden; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.299);
+    margin-bottom: 35px;
 }
+#container--principal .left{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+#container--principal .left .container{
+    padding: 10px;
+    width: 100%;
+    min-height: 570px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #container--principal .left h3{
     text-align: center;
+    z-index: 11;
 }
 
 #container--principal .rigth{
-    background-color: rgb(0, 251, 255);
-    height: 700px;
+    /* background-color: rgba(0, 251, 255, 0.078); */
+    height: 750px;
     position: sticky;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+#container--principal .rigth .description{
+    min-height: 50px;
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    border-radius: 15px;
+    font-size: .86rem;
+    padding: 15px;
+    width: 80%;
+    box-sizing: border-box;
+    background-color: white;
+}
+#container--principal .rigth .couleur-disponible{
+    min-height: 80px;
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    border-radius: 15px;
+    background-color: white;
+}
+#container--principal .rigth .couleur-disponible .couleur{
+    height: 50px;
+    width: 100%;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+#container--principal .rigth .couleur-disponible .couleur .item{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.281);
+}
+#container--principal .rigth .couleur-disponible .couleur .item:hover{
+    border: 2px solid black;
+}
+#container--principal .rigth .quantite{
+    margin-top: 10px;
+    height: 35px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 10px;
+    font-size: .9rem;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    border-radius: 15px;
+    padding-top: 10px;
+    background-color: white;
+}
+#container--principal .rigth .quantite .input-Q{
+    height: 80%;
+    width: 130px;
+    display: flex;
+}
+#container--principal .rigth .quantite .input-Q .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border: 1px solid rgba(0, 0, 0, 0.334);
+}
+#container--principal .rigth .quantite .input-Q .item:nth-child(1),#container--principal .rigth .quantite .input-Q .item:nth-child(3){
+    width: 25%;
+    cursor: pointer;
+}
+#container--principal .rigth .quantite .input-Q .item:nth-child(1):active,#container--principal .rigth .quantite .input-Q .item:nth-child(3):active{
+    background-color: rgb(211, 211, 211);
+}
+#container--principal .rigth .quantite .input-Q .item:nth-child(2){
+    width: 50%;
+}
+/* prix */
+#prix{
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 80%;
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    padding: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+}
+#prix span{
+    color: rgb(255, 123, 0);
+}
+#panier-2{
+    height: 55px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#panier-2 .btn{
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+    width: 100%;
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    transition: .3s;
+    cursor: pointer;
+}
+#panier-2 .btn:hover{
+    background-color: rgb(60, 60, 60);
+}
+#panier-2 .lik{
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(180, 180, 180);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-image: url(../icon/icons8-coeurs-24.png);
+    
+}
+#politique{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    max-width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    overflow: hidden;
+}
+#politique .imgtitre{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 30px;
+}
+#politique .imgtitre img{
+    height: 25px;
+}
+#politique .imgtitre h4{
+    font-size: .8rem;
+}
+#politique .item{
+    background-color: rgba(0, 57, 127, 0.101);
+    height: 24%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#politique .detail p{
+    font-size: .7rem;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 35px;
+}
+#politique .detail .p-complex{
+    display: flex;
+    gap: 20px;
+    overflow: scroll;
+}
+#politique .detail .p-complex::-webkit-scrollbar{
+    display: none;
+}
+#politique .detail .p-complex span{
+    display: block;
+    min-width: 108px;
+    height: 26px;
+    box-sizing: border-box;
+    display: flex;
+    white-space: nowrap;
+    
+}
+#politique .detail .p-complex span img{
+    height: 15px;
+}
+/* dispositions des images */
+#visuel-produit{
+    height: 550px;
+    width: 90%;
+    background-color: rgb(251, 251, 251);
+    position: absolute;
+    padding: 10px;
+}
+/* div receveur */
+#espace-pour-info-produit-telephone{
+    /* background-color: blue; */
+    min-height: 5px;
+    width: 100%;
+    margin-top: 10px;
+    /* display: none; */
+}
+/* section commentaire des clients */
+#commentaire-client{
+    min-height: 500px;
+    width: 95%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#commentaire-client h2{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+#commentaire-client .item{
+    min-height: 100px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    border: 1px solid rgba(0, 0, 0, 0.063);
+    background-color: white;
+}
+#commentaire-client .item .nom-date{
+    /* background-color: red; */
+    min-height: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 7px;
+}
+#commentaire-client .item .nom-date .user{
+    background-color: rgb(0, 18, 69);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#commentaire-client .item .nom-date span{
+    color: rgb(0, 132, 15);
+}
+#commentaire-client .item p{
+    font-size: .9rem;
+}
+
+#commentaire-client .item .type{
+    /* background-color: rgb(68, 255, 0); */
+    min-height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+#commentaire-client .item .type p{
+    font-size: .8rem;
+    opacity: .6;
+    font-weight: 600;
+}
+#commentaire-client .item .commentaire{
+    width: 100%;
+    font-size: 1rem;
+    text-align: start;
+    opacity: .7;
+}
+
+#commentaire-client .item .jaime{
+    min-height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    gap: 10px;
+    font-size: .7rem;
+    color: rgb(132, 62, 0);
+}
+#commentaire-client .item .jaime .img{
+    /* background-color: rgb(212, 249, 255); */
+    width: 25px;
+    height: 25px;
+    background-image: url(../icon/icons8-jaime-ça-50.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: .2s;
+}
+#commentaire-client .item .jaime :hover{
+    background-size: 70%;
+    
+}
+/* btn ajouter commentair */
+#ajouter-commentaire{
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.189);
+    cursor: pointer;
+    transition: .3s;
+}
+#ajouter-commentaire:hover{
+    background-color: rgb(243, 243, 255);
+}
+/* affichage de like */
+#nombre-lik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none!important;
+}
+#nombre-lik .lik {
+    border-bottom: 1px solid rgba(178, 178, 178, 0.234);
+    height: 60px;
+    width: 95%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+#nombre-lik .lik img{
+    height: 35px;
+}
+/* formulaire pour ajouter des commentaire */
+#container-ajouter-commentaire{
+    background-color: rgba(0, 0, 0, 0.112);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
     top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+}
+/* style pour l'apparution du formulaire */
+.forme-visible{
+    transform: scale(1)!important;
+    opacity: 1!important;
+    border-radius: 0px!important;
+    background-color: rgba(0, 0, 0, 0.412)!important;
+}
+#container-ajouter-commentaire .formulair{
+    background-color: rgb(35, 35, 35);
+    height: 310px;
+    width: 600px;
+    border-radius: 10px 20px 10px 10px;
+    padding: 5px;
+    position: relative;
+}
+#container-ajouter-commentaire .formulair textarea{
+    height: 85%;
+    width: 99.7%;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    resize: none;
+}
+#container-ajouter-commentaire .formulair button{
+    height: 13%;
+    width: 100%;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    font-size: 1rem;background-color: rgb(74, 119, 255);
+    color: white;
+    transition: .3s;
+}
+#container-ajouter-commentaire .formulair button:hover{
+    border-radius: 10px;
+    font-size: 1rem;background-color: rgb(0, 64, 255);
+}
+#container-ajouter-commentaire .formulair .btn-close{
+    background-color: rgb(35, 35, 35);
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+#container-ajouter-commentaire .formulair .btn-close img{
+    height: 25px;
+}
+#container-ajouter-commentaire .formulair .btn-close:hover img{
+    transform: scale(1.1);
+    transition: .3s;
+}
+#produit-similaire{
+    /* background-color: red; */
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+}
+#presentation-produit .produit-container .produit .img{
+    background-image: url(../images/haut-parleur.png);
+}
+@media(max-width:1150px){
+    #commentaire-client h2{
+        font-size: 1.3rem;
+    }
+    #commentaire-client .item p{
+        font-size: .8rem;
+    }
+    #commentaire-client .item .type p{
+        font-size: .7rem;
+        opacity: .8;
+        font-weight: 500;
+    }
+    #commentaire-client .item .commentaire{
+        opacity: .9;
+    }
+    #commentaire-client .item .commentaire p{
+        font-size: .8rem;
+    }
+    #container--principal .rigth .description{
+        font-size: .8rem;
+    }
+    h4{
+        font-size: .95rem;
+    }
+    #prix{
+        font-size: 1rem;
+    }
+    #panier-2{
+        height: 45px!important;
+    }
+    #panier-2 .btn{
+        background-color: rgb(0, 0, 0);
+        height: 40px;
+        width: 70%!important;
+        font-size: .7rem;
+    }
+    #panier-2 .lik{
+        min-height: 40px;
+        min-width: 40px;
+    }
+    body{
+        padding-bottom: 50px;
+    }
+}
+@media(max-width:900px){
+    #commentaire-client h2{
+        font-size: 1.2rem;
+    }
+    #commentaire-client .item .commentaire{
+        opacity: .9;
+    }
+    #commentaire-client .item .commentaire p{
+        font-size: .75rem;
+    }
+    #container--principal .rigth .description{
+        font-size: .75rem;
+    }
+    h4{
+        font-size: .90rem;
+    }
+    #prix{
+        font-size: .9rem;
+    }
+    #panier-2{
+        height: 45px!important;
+    }
+    #panier-2 .btn{
+        background-color: rgb(0, 0, 0);
+        height: 40px;
+        width: 70%!important;
+        font-size: .55rem;
+    }
+    #container--principal .left .container{
+        min-height: 470px;
+    }
+    #visuel-produit{
+        height: 450px;
+        width: 90%;
+        background-color: rgb(251, 251, 251);
+        position: absolute;
+        padding: 10px;
+    }
+    /* body{
+        display: none;
+    } */
+}
+@media(max-width:850px){
+    
+    #container--principal{
+        display: grid;
+        grid-template-columns: 1fr!important;
+    }
+    #container--principal .rigth{
+        align-items: center;
+    }
+    #container--principal .rigth .description, #container--principal .rigth .couleur-disponible,#container--principal .rigth .quantite,#panier-2,#prix,#politique{
+        width: 95%;
+    }
+    #container--principal .rigth .description{
+        font-size: .9rem;
+    }
+    
+}
+@media(max-width:700px){
+    #container-ajouter-commentaire{
+        align-items: start;
+    }
+    #container-ajouter-commentaire .formulair{
+        width: 90%;
+        margin-top: 60px;
+    }
 }
