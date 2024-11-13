@@ -8,6 +8,10 @@
     align-items: center;
 }
 
+#recherche{
+    opacity: 1!important;
+    transform: translate(0);
+}
 /* slider */
 /* slide 2 */
 #swiper-wrapper div:nth-child(2) .front{
@@ -66,7 +70,6 @@
     gap: 10px;
 }
 #swiper-wrapper div:nth-child(2) .front .rigth .container div{
-    background-color: yellow;
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -220,10 +223,10 @@
     margin-bottom: 30px;
 }
 #titrecontainer h2{
-    font-family: "Updock", cursive;
-    font-weight: 400;
+    /* font-family: "Updock", cursive; */
+    font-weight: 300;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     text-decoration: underline;
     color: rgb(0, 0, 116);
@@ -244,6 +247,9 @@
     min-height: 500px;
     padding-bottom: 10px;
     width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* categories */
 #produit-container .categories{
@@ -286,10 +292,14 @@
 }
 /* les produit */
 #presentation-produit{
-    width: 100%;
+    width: 95%;
+    min-height: 100px;
+    padding: 5px;
 }
 .produit-container{
     margin-top: 20px;
+    min-height: 100px;
+    width: 100%;
 }
 #presentation-produit .produit-container .produit .img{
     background-image: url(../images/online-shop-dark-blue-with-shopping-element-3d-illustration_925613-52404.jpg);
@@ -423,6 +433,16 @@
 }
 #swiper-wrapper div:nth-child(3) .front .rigth p{
     font-size: 1.1rem;
+}
+
+.swiper {
+    height: 210px!important;
+    width: 98%;
+    margin-top: 50px;
+}
+.slider-container{
+    border-radius: 10px;
+    height: 210px!important;
 }
 }
 
