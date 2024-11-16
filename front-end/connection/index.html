@@ -10,25 +10,31 @@
         #lien{
             /* background-color: red; */
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: start;
+            gap: 10px;
         }
 
         #lien a{
-            color: rgb(0, 17, 255);
+            color: rgb(241, 241, 241);
             font-size: .9rem;
             transition: .2s;
         }
         #lien a:hover{
-            color: rgb(0, 0, 0);
+            
+            color: rgb(0, 255, 123);
         }
         .container{
-            min-height: 350px;
+            min-height: 300px!important;
+            width: 400px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>S'inscrire</h2>
+        <div id="titr">
+            <h2>S'inscrire</h2>
+            <img src="../icon/icons8-se-connecter-64.png" alt="">
+        </div>
         <form action="">
             <div class="adress">
                 <label for="">E-mail:</label>
@@ -40,21 +46,13 @@
                 <input type="password">
             </div>
 
-            <input type="submit" value="Se connecté">
+            <input type="submit" value="Se connecter">
 
             <div id="lien">
                 <a href="">mot de pass oublier</a>
                 <a href="../inscription/inscription.html">Créer un compte</a>
             </div>
         </form>
-        <ul id="divbacgroud">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-        </ul>
-        <div id="blur"></div>
 </div>
 </body>
 </html>

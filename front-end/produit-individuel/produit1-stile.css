@@ -20,6 +20,11 @@ body{
     /* overflow: hidden; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.299);
     margin-bottom: 35px;
+    margin-top: 50px;
+}
+.recherche{
+    opacity: 1!important;
+    transform: translate(0)!important;
 }
 #container--principal .left{
     /* background-color: yellow; */
@@ -95,7 +100,7 @@ body{
 #container--principal .rigth .quantite{
     margin-top: 10px;
     height: 35px;
-    width: 80%;
+    width: 78%;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -147,6 +152,7 @@ body{
     border-radius: 15px;
     padding: 10px;
     background-color: white;
+    box-sizing: border-box;
 }
 #prix span{
     color: rgb(255, 123, 0);
@@ -159,7 +165,7 @@ body{
     gap: 20px;
 }
 #panier-2 .btn{
-    background-color: rgb(0, 0, 0);
+    background-color:rgb(0, 27, 76);
     height: 50px;
     width: 100%;
     border: 2px solid rgb(173, 173, 173);
@@ -364,16 +370,18 @@ body{
 }
 /* btn ajouter commentair */
 #ajouter-commentaire{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(8, 0, 82);
     box-sizing: border-box;
-    padding: 2px;
+    padding: 5px;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.189);
+    border: 1px solid rgb(8, 0, 82);
     cursor: pointer;
     transition: .3s;
+    color: white;
 }
 #ajouter-commentaire:hover{
     background-color: rgb(243, 243, 255);
+    background-color: rgba(9, 0, 90, 0.596);
 }
 /* affichage de like */
 #nombre-lik {
@@ -591,5 +599,8 @@ body{
     #container-ajouter-commentaire .formulair{
         width: 90%;
         margin-top: 60px;
+    }
+    #container--principal{
+        margin-top: 30px;
     }
 }

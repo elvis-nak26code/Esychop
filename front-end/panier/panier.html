@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="panier.css">
     <link rel="stylesheet" href="../style.css">
     <script src="../scrypt.js" defer></script>
+    <script src="panier.js" defer></script>
     <!-- font -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +23,15 @@
     <nav>
         <p id="logo">EsyShop</p>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="/front-end/produit/produit.html">Produit</a></li>
-            <li id="panier"><a href="">Panier</a><div id="notification">1</div></li>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../produit/produit.html">Produit</a></li>
+            <li id="panier"><a href="../panier/panier.html">Panier</a><div id="notification">1</div></li>
             <li><a href="">Suportclient</a></li>
             <li><a href="">Legal</a></li>
         </ul>
         <div class="recherche">
             <input type="text" name="" id="" placeholder="recherche">
-            <div class="btn"><img src="icon/icons8-loupe-50.png" alt=""></div>
+            <div class="btn"><img src="../icon/icons8-loupe-blanc.png" alt=""><p>recherche</p></div>
         </div>
         
         <div class="user" id="userN">N</div>
@@ -174,8 +175,38 @@
         </div>
         <div class="rigth">
             <div id="resume">
-                <div class="resume"></div>
-                <div class="payement"></div>
+                <div class="resume">
+                    <h3>Résumé de votre commande</h3>
+                    <div class="imgs">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                    <div class="detail">
+                        <div class="item"> <span>prix de référence:</span>  <span class="prix">$834,4</span> </div>
+                        <div class="item"> <span>Réduction:</span>  <span class="prix">$00,00</span> </div>
+                        <div class="item"> <span>Sous-total:</span>  <span class="prix" >$834,4</span> </div>
+                    </div>
+                    <div class="total-caiss">
+                        <div class="total"><span>Sous-total:</span> 
+                            <span class="prix" id="prixtotal">00.00</span>
+                        </div>
+                        <div class="caisse">Passer a la caisse ( <span>3</span> )</div>
+                    </div>
+                </div>
+                <div class="payement">
+                    <h4>Payez facilement avec</h4>
+                    <div class="logos">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -200,10 +231,10 @@
 
     <!-- menu du bas -->
     <div id="bootommenu">
-        <div><a href="../index.html"><img src="../icon/nav-icon/home.png" alt=""></a>Home</div>
+        <div><a href="../../index.html"><img src="../icon/nav-icon/home.png" alt=""></a>Home</div>
         <div><a href="../produit/produit.html"><img src="../icon/nav-icon/produit.png" alt=""></a>Produit</div>
         <div><a href="../panier/panier.html"><img src="../icon/nav-icon/panier-remplit.png" alt=""></a>Panier</div>
-        <div><a href=""><img src="../icon/icons8-service-client-50.png" alt=""></a>Suportclient</div>
+        <div><a href="../messagerie/message.html"><img src="../icon/nav-icon/icons8-message-50.png" alt=""></a>Suportclient</div>
         <div><a href=""><img src="../icon/icons8-loi-50.png" alt=""></a>legal</div>
     </div>
 </body>

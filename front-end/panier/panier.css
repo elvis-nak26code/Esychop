@@ -18,7 +18,11 @@ body{
     grid-template-columns: 2fr 1.2fr;
     padding: 5px;
     box-sizing: border-box;
-    
+    margin-top: 65px;
+}
+.recherche{
+    opacity: 1!important;
+    transform: translate(0)!important;
 }
 /* le container des article dans le panier */
 #container-principal .left{
@@ -38,7 +42,7 @@ body{
     gap: 10px;
     padding-left: 20px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.223);
     margin-top: 15px;
     background-color: white;
 }
@@ -50,7 +54,7 @@ body{
 #container-principal .left .articles{
     min-height: 170px;
     width: 95%;
-    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.059);
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.171);
     background-color: white;
     border-radius: 7px;
     overflow: hidden;
@@ -121,7 +125,7 @@ body{
     font-weight: 500;
 }
 #container-principal .left .articles .img-description .description .top .modifier{
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(224, 225, 255);
     width: 90px;
     display: flex;
     justify-content: center;
@@ -131,9 +135,10 @@ body{
     padding: 1px;
     transition: .5s;
     cursor: pointer;
-    font-size: .8rem;height: 20px;
+    font-size: .7rem;
+    height: 20px;
     box-sizing: border-box;
-    padding-bottom: 3px;
+    /* padding-bottom: 3px; */
     margin-top: 25px;
 }
 #container-principal .left .articles .img-description .description .top .modifier:hover{
@@ -201,19 +206,165 @@ body{
     margin-top: 20px;
 }
 #resume{
-    height: 380px;
+    height: 480px;
     width: 90%;
-    background-color: red;
+    max-width: 450px;
+    /* background-color: red; */
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.223);
     position: sticky;
-    top: 60px;
+    top: 70px;
     overflow: hidden;
     border-radius: 10px;
 }
 #resume .resume{
-    background-color: blue;
-    height: 235px;
+    background-color: rgb(255, 255, 255);
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+#resume .resume .imgs{
+    height: 90px;
+    /* background-color: red; */
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#resume .resume .imgs::-webkit-scrollbar{
+    display: none;
+}
+#resume .resume .imgs .item{
+    /* background-color: blue; */
+    box-shadow: 0px 0px 10px 2px rgba(70, 70, 70, 0.1);
+    height: 95%;
+    min-width: 75px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/airpode.png);
+}
+#resume .resume .detail{
+    /* background-color: blueviolet; */
+    height: 100px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap: 2px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+#resume .resume .detail .item{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#resume .resume .detail .item span{
+    font-size: .8rem;
+    font-weight: 600;
+}
+#resume .resume .detail .item .prix{
+    color: rgb(255, 98, 0);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 
+#resume .resume .total-caiss .total .prix{
+    color: rgb(255, 98, 0);
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+#resume .resume .total-caiss{
+    /* background-color: rgb(183, 0, 255); */
+    height: calc(100% - 220px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.31);
+}
+#resume .resume .total-caiss .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+#resume .resume .total-caiss .total #prixtotal{
+    /* background-color: red; */
+    padding: 2px;
+    box-sizing: border-box;
+    min-width:150px ;
+    display: flex;
+    justify-content: end;
+}
+#resume .resume .total-caiss .total span{
+    font-weight: 700;
+}
+#resume .total-caiss .caisse{
+    background-color: rgb(0, 27, 76);
+    border-radius: 5px;
+    height: 60px;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    transition: .3s;
+}
+#resume .total-caiss .caisse:hover{
+    background-color: rgba(0, 27, 76, 0.693);
+}
+#resume .payement{
+    /* background-color: rgb(4, 255, 0); */
+    height: calc(100% - 355px);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.286);
+}
+#resume .payement .logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    height: 90%;
+    width: 100%;
+}
+#resume .payement .logos .item{
+    /* background-color: rgb(0, 21, 255); */
+    border-radius: 5px;
+    height: 70%;
+    width: 23%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .8;
+}
+#resume .payement .logos .item:nth-child(1){
+    background-image: url(../panier/payementImg/visa.jpeg);
+}
+#resume .payement .logos .item:nth-child(2){
+    background-image: url(../panier/payementImg/moov.png);
+}
+#resume .payement .logos .item:nth-child(3){
+    background-image: url(../panier/payementImg/orang.jpg);
+}
+#resume .payement .logos .item:nth-child(4){
+    background-image: url(../panier/payementImg/ligdi.png);
+    background-color: rgba(191, 255, 0, 0.422);
+}
 
 /* responsive */
 
@@ -287,4 +438,27 @@ body{
         height: 26px;
         width: 26px;
     }
+    #container-principal{
+        margin-top: 40px;
+    }
+    #resume{
+        max-width: 350px;
+    }
+    #resume .total-caiss .caisse{
+        font-size: 1rem;
+    }
+    #resume .resume .total-caiss .total .prix{
+        font-size: 1.1rem;
+    }
 }   
+
+
+@media(max-width:345px){
+    #resume{
+        max-width: 300px;
+    }
+    #resume .payement .logos .item{
+    height: 60%;
+    width: 23%;
+}
+}

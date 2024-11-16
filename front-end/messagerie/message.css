@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* container principale */
+#container-messagerie{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#affichage-m{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    overflow: scroll;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#affichage-m::-webkit-scrollbar{
+    height: 0;
+    width: 7px;
+}
+#affichage-m::-webkit-scrollbar-thumb{
+    background-color: rgb(148, 148, 148);
+    border-radius: 10px;
+}
+/* petite dive contenent les messages entrant et sortant  */
+#affichage-m .item-l,#affichage-m .item-r{
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: white;
+    /* background-color: red; */
+}
+/* entrant */
+#affichage-m .item-l{
+    justify-content: start;
+}
+/* sortant */
+#affichage-m .item-r{
+    justify-content: end;
+}
+
+#affichage-m .item-l .left{
+    background-color:#E8EAF6;
+    color: #1A237E ;
+    min-height: 60px;
+    min-width: 10%;
+    max-width: 60%;
+    overflow-wrap: break-word;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 5px 2px #E8EAF6; */
+}
+#affichage-m .item-l .left p,#affichage-m .item-r .rigth p{
+    overflow-wrap: break-word;
+    font-weight: 500;
+}
+/* le nom associer au message */
+#affichage-m .item-l .left .nom,#affichage-m .item-r .rigth .nom{
+    background-color: rgba(9, 9, 9, 0.073);
+    height: 15px;
+    min-width: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: .8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+}
+#affichage-m .item-l .left .nom{
+    color: #1A237E ;
+}
+/* la date associer au messages */
+#affichage-m .item-l .left .time,#affichage-m .item-r .rigth .time{
+    height: 15px;
+    padding-right: 10px;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 5px;
+    color: black;
+}
+#affichage-m .item-r .rigth .time{
+    color: rgb(53, 48, 48);
+}
+#affichage-m .item-r .rigth{
+    background-color: #2195f3d0;
+    color:  #FFFFFF ;
+    min-height: 60px;
+    min-width: 10%;
+    max-width: 60%;
+    overflow-wrap: break-word;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    
+}
+
+/* animation pour les messages sortants */
+.animationSortimessage{
+    transform: translateY(50px);
+    opacity: 0;
+    animation: sortiMessage .65s 1 forwards;
+}
+@keyframes sortiMessage{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* le contenair de l'inpute de saisi */
+#input-m{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input-m .container-input{
+    background-color:#F5F5F5;
+    height: 80%;
+    width: 70%;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border: 1px solid #2196F3 ;
+}
+#input-m .container-input input{
+    height: 100%;
+    width: 90%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.1rem;
+    background: none;
+    color:#1A237E ;
+}
+/* le btn envoier */
+#input-m .container-input .btnenvoie{
+    height: 50px;
+    width: 10%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px;
+    height: 100%;
+}
+#input-m .container-input .btnenvoie .btn{
+    background-color: #2196F3;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-image: url(../icon/icons8-envoyé-64.png);
+    transition: .2s;
+}
+#input-m .container-input .btnenvoie .btn:hover{
+    background-color: #1565C0;
+}
+#input-m .container-input .btnenvoie .btn:active{
+    transform: scale(1.1);
+}
+/* le responsive */
+@media(max-width:1200px){
+    #container-messagerie{
+        padding-bottom:50px ;
+    }
+}
+@media(max-width:700px){
+    #container-messagerie{
+        padding-top: 50px;
+        position: relative;
+    }
+    #input-m .container-input{
+        width: 85%;
+    }
+    #affichage-m .item-l,#affichage-m .item-r{
+        width: 100%;
+    }
+    #input-m{
+        height: 45px;
+        margin-bottom: 10px;
+    }
+    #input-m .container-input .btnenvoie .btn{
+        height: 26px;
+        width: 26px;
+    }
+    #input-m .container-input input{
+        font-size: .9rem;
+    }
+    #affichage-m .item-l .left,#affichage-m .item-r .rigth{
+        min-width: 20%;
+        max-width: 80%;
+        font-size: .75rem;
+    }
+
+
+    /* #input-m{
+        background-color: rgb(198, 198, 198);
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 100px;
+    } */
+
+}
