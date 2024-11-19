@@ -28,3 +28,4 @@ btnAjouterCommentaire.addEventListener('click',()=>{
 btnClose.addEventListener('click',()=>{
     textereaCommentaire.classList.remove('forme-visible')
 })
+
